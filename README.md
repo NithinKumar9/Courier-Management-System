@@ -1,5 +1,5 @@
 # COURIER MANAGEMENT SYSTEM
-## This is a Website of online courier system
+## This is a Website of online courier management system
 - Couriers are distinguished from ordinary mail services by features such as speed, security, tracking, signature, specialization and individualization of express services, and swift delivery times, which are optional for most everyday mail services. 
 - As a premium service, couriers are usually more expensive than standard mail services, and their use is normally limited to packages where one or more of these features are considered important enough to warrant the cost.
 
@@ -13,8 +13,6 @@
 <img width="395" alt="Courier  ER diagram" src="https://user-images.githubusercontent.com/75004804/130726455-f75dd62a-0276-43c3-9ba2-9e4ad9131fa0.png">
 <br>
 <br>
-
-#
 
 ### 2. Web Pages ScreenShots
 <br>
