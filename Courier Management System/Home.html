@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .bg {
+        background-image: url("home_background.jpg");
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .nav {
+        position: relative;
+        padding: 20px;
+        background-color: #00204fff;
+    }
+
+    .nav img {
+        position: absolute;
+        top: 0px;
+        margin-top: 0px;
+        float: left;
+    }
+
+    .nav ul {
+        position: relative;
+        top: 0px;
+        text-align: right;
+        justify-content: center;
+        list-style-type: none;
+    }
+
+    .nav li a {
+        position: relative;
+        display: block;
+        color: white;
+        padding: 0px 15px;
+        top: 0px;
+        left: 10px;
+        right: 10px;
+        text-decoration: none;
+        float: left;
+    }
+
+    .nav li a:hover {
+        color: red;
+    }
+
+    .name {
+        position: relative;
+        text-align: center;
+        top: 0px;
+    }
+
+    .name .subname {
+        position: relative;
+        text-align: center;
+        top: 0px;
+        color: rgb(0, 0, 0);
+    }
+
+    .name .subname p {
+        text-align: center;
+    }
+
+    .box {
+        position: relative;
+        width: 270px;
+        height: 280px;
+        margin: 0px;
+        box-shadow: 2px 2px 5px rgb(0, 0, 0);
+        border-radius: 15px;
+        overflow: hidden;
+        top: 80px;
+        left: 50px;
+        bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .box [type="submit"] {
+        position: relative;
+        padding: 6px;
+        top: 40px;
+        left: -50px;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        background-color: rgb(255, 123, 0);
+
+
+    }
+
+    .box button:hover {
+        background-color: rgb(255, 255, 255);
+        color: rgb(255, 123, 0);
+    }
+
+    .box h1 {
+        position: relative;
+        text-align: center;
+        transform: rotate(270deg);
+        top: -10px;
+        left: 95px;
+        letter-spacing: 15px;
+    }
+
+    .box input {
+        position: relative;
+        top: 20px;
+        left: -80px;
+    }
+
+    .box [type="Pin"] {
+        padding: 0px 56px;
+        float: left;
+    }
+
+    .bottom-text {
+        position: relative;
+        text-align: center;
+        top: 180px;
+        left: -200px;
+        font-style: italic;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        display: none;
+        top: 15px;
+        position: absolute;
+        background-color: #f1f1f1;
+        border-radius: 10px;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 10px 10px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        border-radius: 10px;
+        background-color: rgb(253, 0, 55);
+        color: white;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: red;
+    }
+
+    .social {
+        position: relative;
+        top: -55px;
+    }
+
+    [type="fb"] {
+        position: absolute;
+        float: right;
+        size: 1px;
+        right: 12px;
+        top: 200px;
+
+    }
+
+    [type="in"] {
+        position: absolute;
+        float: right;
+        size: 1px;
+        right: 10px;
+        top: 250px;
+    }
+
+    [type="g"] {
+        position: absolute;
+        float: right;
+        size: 1px;
+        right: 10px;
+        top: 300px;
+    }
+
+    .disb {
+        background-color: rgb(255, 102, 0);
+    }
+
+    .disb a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .bx select {
+        position: relative;
+        align-items: center;
+        top: 18px;
+        right: 80px;
+        width: 173.5px;
+        border-spacing: 10px;
+    }
+
+    .take {
+        position: relative;
+        top: 19vh;
+        left: 5%;
+    }
+</style>
+
+<body>
+    <script>
+        function getpize() {
+            var from_pincode = document.f1.f_pincode.value;
+            var to_pincode = document.f1.t_pincode.value;
+            var quan = document.f1.quantity.value;
+            var wei = document.f1.weight.value;
+            var delivery = document.f1.delivery_service.value;
+            var prize;
+
+            if (delivery == "Speed") {
+                prize = (((from_pincode + to_pincode + quan + wei) / 999929980288972) ) + 30;
+                //alert(prize + " delivery_Service is Speed");
+            }
+            else if (delivery == "Best") {
+                prize = (((from_pincode + to_pincode + quan + wei) / 999929980288972) ) + 20;
+                //alert(prize + " delivery_Service is Best");
+            }
+            else if (delivery == "Economy") {
+                prize = (((from_pincode + to_pincode + quan + wei) / 999929980288972)) + 10;
+                //alert(prize + " delivery_Service is Economy");
+            }
+
+            if(prize>=1000)
+            {
+                prize = prize/10;
+            } 
+            prize = prize.toFixed(2);
+            document.getElementById('result').value = prize;
+        }
+    </script>
+    <div class="bg">
+        <div class="nav">
+            <img src="logo.png" />
+            <ul>
+                <li style="float:right"><a href="about.html">About</a></li>
+                <li style="float:right"><a href="contact.html">Contact</a></li>
+                <div class="dropdown">
+                    <li style="float:right"><a href="#contact">Login</a></li>
+                    <div class="dropdown-content">
+                        <a href="mlogin.html">Manager Login</a>
+                        <a href="slogin.html">Staff Login</a>
+                        <a href="dlogin.html">Delivary Boy Login</a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div class="name">
+            <h1>V3 COURIERS</h1>
+
+            <div class="subname">
+                <p>SERVICE AT YOUR DOOR STEP</p>
+            </div>
+        </div>
+        <div class="social">
+            <a type="fb" href="https://www.facebook.com/" target="0"><img
+                    src="https://img.icons8.com/metro/20/000000/facebook-new--v2.png" /></a>
+            <a type="in" href="https://www.instagram.com/" target="1"><img
+                    src="https://img.icons8.com/fluent-systems-filled/24/000000/instagram-new.png" /></a>
+            <a type="g" href="https://github.com/" target="2"><img
+                    src="https://img.icons8.com/material/24/000000/github.png" /></a>
+        </div>
+        <div class="box">
+            <h1>QUOTE</h1><br>
+            <div class="bx">
+                <form name="f1" action="home.php" method="POST">
+                    <input type="Pin" placeholder="From Pin" name="f_pincode" pattern="56\d\d\d\d" size="6"
+                        minlength="6" maxlength="6" required title=" Enter 6 Digit Pin Starting with 56"><br><br>
+                    <input type="Pin" placeholder="To Pin" name="t_pincode" pattern="56\d\d\d\d" minlength="6" size="6"
+                        maxlength="6" required title=" Enter 6 Digit Pin Starting with 56"><br><br>
+                    <input type="number" placeholder="Quantity" name="quantity" required
+                        title="Enter the Quantity"><br><br>
+                    <input type="text" placeholder="Weight(in gm)" name="weight" required
+                        title=" Enter the weight"><br><br>
+                    <select name="delivery_service" required oninput="getpize()">ś
+                        <option value="disabled selected" name="disabled selected">Delivery Service</option>
+                        <option value="Speed" name="Speed">Speed(Next Day)</option>
+                        <option value="Best" name="Best">Best(Within 2 Days)</option>
+                        <option value="Economy" name="Economy">Economy(Within 4 Days)</option>
+                    </select>
+                    <input type="number" placeholder="PRICE" name="result" id="result" readonly>
+                    <button type="submit" id="submit"><b>Get A Quote</b></button>
+
+                </form>
+
+
+            </div>
+        </div>
+        <div class="take">
+            <h3>Take A Tour</h3>
+            <ul>
+                <li>Get a quote from our home page.</li>
+                <li>Select the courier date that best suits you.</li>
+                <li>Fill out your details and pay.</li>
+                <li>Attach your label to your parcel.</li>
+                <li>Hand it over to the courier when we collect it (or) take it to a drop off location</li>
+                <li>The package will be delivered to the Reciever safely and securly</li>
+            </ul>
+        </div>
+        <div class="bottom-text">
+            <b>
+                <p>"We provide the Best Courier Service right until your Door Step"</p>
+                <p>"We Risk our lifes for your Service"</p>
+                <p>"Be safe and make your Loved ones safe"</p>
+                <p>"We sanitize every packed courier without contact"</p>
+                <p>"We assure you a contactless and a Safe delivery"</p>
+            </b>
+        </div><br><br><br><br><br><br><br><br><br><br><br>
+
+    </div>
+    <div class="disb">
+        <footer class="dis">
+            <h4>V3 COURIER SERVICE</h4>
+            <p>Service at your door Step</p>
+            <p><a href="about.html">About Us</a></p>
+            <p><a href="contact.html">Contact</a></p>
+            <p><a href="">Privacy Policy</a></p>
+            <p><a href="">Terms</a></p>
+            <p><a href="contact.html">Feedback/Suggestion</a></p>
+            <p>By visiting and using this site, you consent to the privacy policy, and placing of cookies by
+                V3couriers.com</p>
+            <p>Copyright @ 2021 V3 COURIERS. All rights reserved.
+            </p>
+            <div class="social-link">
+        </footer>
+    </div>
+</body>
+
+</html>

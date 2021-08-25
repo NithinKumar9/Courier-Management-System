@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Delivery Boy Login</title>
+  <link rel="icon" href="logo.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      background: 100%;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+
+      font-family: "Arial", verdana, sans-serif;
+    }
+
+    form {
+      border: 0px solid #f1f1f1;
+    }
+
+
+    h3 {
+      color: white;
+    }
+
+    h3:hover {
+      color: red;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0px;
+      padding: 0px;
+      overflow: hidden;
+      background-color: #00204fff;
+      position: fixed;
+      width: 100%;
+      top: 0;
+    }
+
+    li {
+      float: left;
+      position: relative;
+      top: 0px;
+    }
+
+    li img {
+      float: left;
+      position: relative;
+      top: 0px;
+    }
+
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      text-decoration: none;
+      float: left;
+    }
+
+    li a:hover {
+      color: red;
+    }
+
+    input[type=text],
+    input[type=password] {
+      padding: 12px 20px;
+      margin: 10px 0;
+      display: inline-block;
+      border: 2px solid #060606;
+      box-sizing: border-box;
+      width: 300px;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 20px;
+      margin: 10px 0;
+      border: none;
+      cursor: pointer;
+    }
+
+    a:hover {
+      background-color: rgb(5, 34, 114);
+      color: white;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      position: absolute;
+      left: 30px;
+      right: 80px;
+      margin-left: 500px;
+    }
+
+    h2 {
+      position: relative;
+      left: 90px;
+      right: 100px;
+      text-align: center;
+      text-shadow: 1px 0px #1e90ff;
+      margin-top: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li><img src="logo.png" /></li>
+    <li>
+      <h3><a>V3couriers</a></h3>
+    </li>
+    <li style="float:right"><a href="about.html">About</a></li>
+    <li style="float:right"><a href="contact.html">Contact</a></li>
+    <li style="float:right"><a href="Home.html">Home</a></li>
+  </ul>
+  <h2 style="font-size:50px"><b>Delivery Boy</b></h2><br>
+  <hr>
+
+  <img src="d1.jpg" style="float:left">
+  <img src="d2.jpg" style="float:right">
+  <div class="container">
+    <form action="d_login.php" method="POST">
+      <label for="login_id"><b>Login Id</b></lable>
+        <input type="text" placeholder=" Enter Login Id" id="login_id" name="login_id" required><br>
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter password" id="password" name="password" required><br>
+        <a href="d_after_lg.php">Login</a><br><br>
+        <label style="font-size:14px">
+          <input type="checkbox" checked="checked" name="remember"> Remember me <br><br>
+        </label>
+      </label>
+    </form>
+    <a href="Home.html">Cancel</a>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="shortcut icon" href="team.png" type="image/x-icon">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        background: 100%;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: 100%;
+        flex-wrap: wrap;
+        min-height: 100vh;
+        background: #010615;
+    }
+
+    .box {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        top: 98px;
+        justify-content: center;
+        align-items: center;
+        margin: 40px;
+        background: #060c21;
+        transition: 0.5s;
+    }
+
+    .box .imgBx {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .box .imgBx img {
+        max-width: 100%;
+        opacity: 0.1;
+        transition: 0.5s;
+    }
+
+    .box:hover .imgBx img {
+        opacity: 1;
+    }
+
+    .box:before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        z-index: -1;
+    }
+
+    .box:after {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        z-index: -2;
+        filter: blur(40px);
+    }
+
+    .box:before,
+    .box:after {
+        background: linear-gradient(235deg, #89ff00, #010615, #ff5e00);
+    }
+
+    .box .contect {
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        height: 78px;
+        background: rgba(0, 0, 0, 0.671);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .box:hover .contect {
+        opacity: 1;
+    }
+
+    .box .contect h2 {
+        font-size: 20px;
+        font-family: 'Lobster', cursive;
+        color: whitesmoke;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 1px;
+    }
+
+    .box .contect h2 span {
+        font-size: 14px;
+        color: rgb(255, 255, 255);
+        font-size: 15px;
+        font-family: 'Pacifico', cursive;
+        font-weight: 200;
+        letter-spacing: 2px;
+    }
+
+    a {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        top: 260px;
+        bottom: -50px;
+        size: 0%;
+
+    }
+
+    h3 {
+        position: absolute;
+        left: 20px;
+        color: white;
+    }
+
+    h3:hover {
+        color: red;
+    }
+
+    ul {
+        position: relative;
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        background-color: #00204fff;
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+
+    li {
+        float: left;
+        position: relative;
+        top: 0px;
+    }
+
+    li img {
+        float: left;
+        position: relative;
+        top: -5px;
+    }
+
+
+    li a {
+        position: relative;
+        top: 10px;
+        display: block;
+        color: white;
+        text-align: center;
+        left: -19px;
+        padding: 10px 10px;
+        text-decoration: none;
+        float: left;
+    }
+
+    li :hover {
+        color: red;
+    }
+
+    h2 {
+        color: white;
+    }
+
+    .about {
+        position: relative;
+        position: fixed;
+        top: 90px;
+        font-size: 10px;
+        bottom: 100px;
+    }
+</style>
+
+<body>
+    <ul>
+        <li><img src="logo.png" /></li>
+        <li>
+            <h3><a>V3couriers</a></h3>
+        </li>
+        <li style="float:right"><a href="about.html">About</a></li>
+        <li style="float:right"><a href="contact.html">Contact</a></li>
+        <li style="float:right"><a href="Home.html">Home</a></li>
+    </ul>
+    <div>
+        <div class="about">
+            <div class="College">
+                <h2>COLLEGE: Government Engineering College Ramanagara</h2><br><br>
+            </div>
+            <div class="branch">
+                <h2>BRANCH: Computer Science and Engineering</h2><br><br>
+            </div>
+            <div class="subject">
+                <h2>SUBJECT: Database Management System(DBMS)</h2><br><br>
+            </div>
+            <div class="Topic">
+                <h2>TOPIC: Courier Management System</h2>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="imgBx">
+            <img src="NIthinB.jpg">
+        </div>
+        <div class="contect">
+            <h2>Nithin Kumar B 1GG18CS028<br>
+            </h2>
+        </div>
+        <a href="https://github.com/NithinKumar9"><img src="github.png" /></a>
+    </div>
+    <div class="box">
+        <div class="imgBx">
+            <img src="Adarsh.jpeg">
+        </div>
+        <div class="contect">
+            <h2>Adarsh Nagaraj 1GG18CS002<br>
+            </h2>
+        </div>
+        <a href="https://github.com/Adarsh232001"><img src="github.png" /></a>
+    </div>
+    <div class="box">
+        <div class="imgBx">
+            <img src="Vinayak.jpg">
+        </div>
+        <div class="contect">
+            <h2>Vinayak S B 1GG18CS043<br>
+            </h2>
+        </div>
+        <a href="https://github.com/vinayak-s-b"><img src="github.png" /></a>
+    </div>
+</body>
+
+</html>

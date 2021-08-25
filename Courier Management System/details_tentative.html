@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Details form</title>
+  <link rel="icon" href="logo.png" type="image/x-icon">
+</head>
+<style>
+  body {
+    background-image: url('details_background.png');
+    height: 100%;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    background: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body,
+  input,
+  select {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    color: #eee;
+  }
+
+  h1,
+  h3 {
+    font-weight: 400;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h3 {
+    color: #1c87c9;
+  }
+
+  .main-block,
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-block {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    background-size: cover;
+  }
+
+  form {
+    position: relative;
+    top: 90px;
+    width: 80%;
+    padding: 25px;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  input,
+  select {
+    padding: 5px;
+    margin-bottom: 20px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  input::placeholder {
+    color: #eee;
+  }
+
+  option {
+    background: black;
+    border: none;
+  }
+
+  .butt a {
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 10px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 20px;
+    color: rgb(31, 243, 3);
+  }
+
+  .butt a:hover {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 123, 0);
+
+  }
+
+  .metod {
+    display: flex;
+  }
+
+  input[type=radio] {
+    display: none;
+  }
+
+  label.radio {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    text-indent: 32px;
+    cursor: pointer;
+  }
+
+  label.radio:before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 2px solid #1c87c9;
+  }
+
+  label.radio:after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 4px;
+    top: 5px;
+    left: 5px;
+    border-bottom: 3px solid #1c87c9;
+    border-left: 3px solid #1c87c9;
+    transform: rotate(-45deg);
+    opacity: 0;
+  }
+
+  input[type=radio]:checked+label:after {
+    opacity: 1;
+  }
+
+  button {
+    display: block;
+    width: 200px;
+    padding: 10px;
+    margin: 20px auto 0;
+    border: none;
+    border-radius: 5px;
+    background: #1c87c9;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  button:hover {
+    background: #095484;
+  }
+
+  @media (min-width: 568px) {
+    .info {
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+
+    input {
+      width: 46%;
+    }
+
+    input.fname {
+      width: 100%;
+    }
+
+    select {
+      width: 48%;
+    }
+  }
+
+
+  h3 {
+    color: white;
+  }
+
+  h3:hover {
+    color: red;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #00204fff;
+    position: fixed;
+    width: 100%;
+  }
+
+  li {
+    float: left;
+    position: relative;
+    top: 0px;
+  }
+
+  li img {
+    float: left;
+    position: relative;
+    top: -5px;
+  }
+
+  li a {
+    position: relative;
+    display: block;
+    color: white;
+    top: 13px;
+    right: 8px;
+    padding: 10px 10px;
+    text-decoration: none;
+    font: 0;
+    float: left;
+  }
+
+  li a:hover {
+    color: red;
+  }
+</style>
+
+<body>
+  <ul>
+    <li><img src="logo.png" /></li>
+    <li>
+      <h3><a>V3couriers</a></h3>
+    </li>
+    <li style="float:right"><a href="about.html">About</a></li>
+    <li style="float:right"><a href="contact.html">Contact</a></li>
+    <li style="float:right"><a href="Home.html">Home</a></li>
+  </ul>
+  <div class="main-block">
+    <form name="details" action="details_tentative.php" method="POST">
+      <h1>Enter the Details</h1>
+      <div class="info">
+        <input type="text" name="customer_name" placeholder="Sender Full Name" required>
+        <input type="text" name="reciever_name" placeholder="Reciever Full Name" required>
+        <input type="text" name="customer_phone" placeholder="Sender Phone Number" required>
+        <input type="text" name="reciever_phone" placeholder="Reciever Phone Number" required>
+        <input type="text" name="customer_email" placeholder="Sender Email Id" required>
+        <input type="text" name="reciever_email" placeholder="Reciever Email Id" required>
+        <input type="text" name="customer_address" placeholder="Sender Address" required>
+        <input type="text" name="reciever_address" placeholder="Reciever Address" required>
+        <input type="number" name="length" placeholder="Length of the courier(in cm)" required>
+        <input type="number" name="height" placeholder="Height of the courier(in cm)" required>
+        <input type="date" name="pday" placeholder="Pick Up Date(YYYY/MM/DD)" min="2021-01-11" required>Pick Up
+        Date(YYYY/MM/DD)
+      </div>
+      <div class="butt">
+        <button align-center href="#send"><b>Submit</b></a>
+      </div>
+    </form>
+
+  </div>
+</body>
+
+</html>
+
+<script language="javascript" type="text/javascript">
+  $(function () {
+    var dtToday = new Date();
+
+    var month = dtToday.getMonth() + 1;
+    var day = dtToday.getDate();
+    var year = dtToday.getFullYear();
+    if (month < 10)
+      month = '0' + month.toString();
+    if (day < 10)
+      day = '0' + day.toString();
+
+    var minDate = year + '-' + month + '-' + day;
+
+    $('#pday').attr('min', minDate);
+  });
+
+</script>
