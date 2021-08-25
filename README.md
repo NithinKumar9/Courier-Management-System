@@ -42,7 +42,5 @@ Contact Us
 <br>
 <br>
 
-About Us
-
 <b>
 ## THANK YOU ❤ </b>
