@@ -44,8 +44,5 @@ Contact Us
 
 About Us
 
-![Screenshot (172)](https://user-images.githubusercontent.com/75004804/130727517-47546f90-29f7-4a11-b372-01b6550f0bcc.png)
-<br>
-<br>
 <b>
 ## THANK YOU ❤ </b>
