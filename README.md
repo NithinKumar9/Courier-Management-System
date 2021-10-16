@@ -8,7 +8,7 @@
 ## Some of the Shapshots
 <br>
 
-### ER Diagram
+### 1. ER Diagram
 
 <img width="395" alt="Courier  ER diagram" src="https://user-images.githubusercontent.com/75004804/130726455-f75dd62a-0276-43c3-9ba2-9e4ad9131fa0.png">
 <br>
